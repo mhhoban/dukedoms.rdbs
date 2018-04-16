@@ -1,2 +1,2 @@
 FROM postgres
-RUN su postgres -c 'createdb game_service'
+COPY ./create_dukedoms_dbs.sh /docker-entrypoint-initdb.d/
