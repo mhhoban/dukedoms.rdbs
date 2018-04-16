@@ -2,11 +2,8 @@ version: '3.1'
 
 services:
   db:
-    build: .
+    image: mhhoban/dukedoms_rdbs
     environment:
       POSTGRES_PASSWORD: daleria
-    volumes:
-      - ./create_game_service_db.sh /docker-entrypoint-initdb.d/
-
     ports:
       - 5432:5432
